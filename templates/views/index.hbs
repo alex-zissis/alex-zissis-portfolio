@@ -63,97 +63,19 @@
 
 	<section class="cd-timeline js-cd-timeline">
 		<div class="cd-timeline__container">
+			{{#each data.milestones}}
 			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--green js-cd-img">
-					<img src="/images/timeline/cd-icon-school.png" alt="School">
+				<div class="cd-timeline__img cd-timeline__img--{{icon_color}} js-cd-img">
+					<img src="{{this.icon}}" alt="{{this.alt}}">
 				</div> <!-- cd-timeline__img -->
 
 				<div class="cd-timeline__content js-cd-content">
-					<h2>Graduated From High School</h2>
-					<p>I gradauted from Newington College in Stanmore, NSW. I completed my Higher School Certificate and
-						particular enjoyed my Infomration Technology and Process, Software Design and Development and
-						Greek classes. This (well the first two) led me to being interested in studying something IT
-						related at university.</p>
-					<span class="cd-timeline__date">November 2016</span>
+					<h2>{{this.title}}</h2>
+					<p>{{this.content}}</p>
+					<span class="cd-timeline__date">{{this.month}}</span>
 				</div> <!-- cd-timeline__content -->
 			</div> <!-- cd-timeline__block -->
-
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--yellow js-cd-img">
-					<img src="/images/timeline/cd-icon-computer.png" alt="Computer">
-				</div> <!-- cd-timeline__img -->
-
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Granted a Scholarship to the University of Technology, Sydney</h2>
-					<p>I was granted a scholarship to UTS in the Bachelor of IT Co-Op program. This was a unique course
-						as companies would sponsor places for ~30 students, and in return we would complete internships
-						at those sponsors. The real world experience I would gather really motivated me to apply for
-						this course.</p>
-					<span class="cd-timeline__date">December 2016</span>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
-
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--red js-cd-img">
-					<img src="/images/timeline/cd-icon-code.png" alt="Code">
-				</div> <!-- cd-timeline__img -->
-
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Began Studying a Bachelor of Information Technology at UTS</h2>
-					<p>In February 2017, I arrived fresh faced for my first day of uni. I had no idea what to expect and
-						was super nervous, however once I started attending classes it really just felt like school
-						again.</p>
-					<span class="cd-timeline__date">February 2017</span>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
-
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--blue js-cd-img">
-					<img src="/images/timeline/cd-icon-work.png" alt="Work">
-				</div> <!-- cd-timeline__img -->
-
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Started Internship at Nielsen TAM</h2>
-					<p>In July 2017, I was really thrown into the deep end. With just 1 semeter of uni under my belt, I
-						joined the workplace for the first time. I was starting at a company called Nielsen TAM, and
-						began in the IT Infrastructure team. In this team, I was involved in management of on-premise
-						infrastructure (mainly VMWare) and maintence of key business systems. I then moved into the
-						development team where I would start work on a few long-term projects.</p>
-					<span class="cd-timeline__date">July 2017</span>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
-
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--red js-cd-img">
-					<img src="/images/timeline/cd-icon-code.png" alt="Code">
-				</div> <!-- cd-timeline__img -->
-
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Finished My Intership and Began at Nielsen as an Employee</h2>
-					<p>After my internship finished, I was kept on at Nielsen in a development/architecture role, where
-						I would help design, develop and implement systems. Here I was exposed to a plethora of
-						programming languages, databases, open-source frameworks, cloud computing services (like AWS). I
-						really enjoyed my time at Nielsen and felt I learned an absolute tonne. This experience really
-						showed me the value of industry experience whilst studying.
-					</p>
-					<span class="cd-timeline__date">December 2017</span>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
-
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--orange js-cd-img">
-					<img src="/images/timeline/cd-icon-government.png" alt="Government">
-				</div> <!-- cd-timeline__img -->
-
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Started My Internship at the Australian Securities and Investments Commission</h2>
-					<p>In January 2019, I began my second placement at the Australian Securities and Investments
-						Commision (ASIC), who are Australia's corporate regulator. At ASIC I was in DevOps role
-						reponsible for the CI/CD pipelines in the company, as well as PaaS management for AWS and Azure.
-					</p>
-					<span class="cd-timeline__date">January 2019</span>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
+			{{/each}}
 		</div>
 	</section> <!-- cd-timeline -->
 
@@ -237,6 +159,12 @@
 	<div class="orange-line height-5 width-40"></div><br>
 	<h4 class="skill-subheading">This section is coming soon. In the meantime, check out this website as my temporary
 		portfolio.</h4>
+
+	{{#each data.portfolios}}
+	<div class="portfolio">
+		{{this.title}}
+	</div>
+	{{/each}}
 
 </div>
 
