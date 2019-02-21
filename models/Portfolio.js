@@ -5,7 +5,7 @@ var Portfolio = new keystone.List('Portfolio');
 Portfolio.add({
     title: { type: Types.Text, initial: true, required: true },
     description: {
-        type: Types.Textarea, initial: true, required: true
+        type: Types.Html, initial: true, required: true, wysiwyg: true
     },
     featured_photo: { type: Types.CloudinaryImage, initial: true, required: true },
     photos: { type: Types.CloudinaryImages, initial: true, required: false },

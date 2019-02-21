@@ -49,9 +49,11 @@
 		<h3 class="subtitle">I design and develop websites, apps and digital solutions.</h3>
 	</div><br><br>
 	<div class="row ta-center">
-		<p class="body-text">Hi I'm Alex and welcome to my website. I'm a student and aspiring software developer. This
+		<p class="body-text">Hi I'm Alex and welcome to my website. I'm a student and aspiring software developer.
+			This
 			website is aimed to
-			let you know a little bit about me, show off my portfolio and let me blog my thoughts to the world. Please
+			let you know a little bit about me, show off my portfolio and let me blog my thoughts to the world.
+			Please
 			enjoy!</p>
 	</div>
 
@@ -98,7 +100,8 @@
 					<span class="skill-content">
 						<h4 class="skill-subheading">Languages / Frameworks</h4>
 
-						<span class="skill-list">JavaScript, TypeScript, Angular, Node.JS, Express.JS, Python, Flask,
+						<span class="skill-list">JavaScript, TypeScript, Angular, Node.JS, Express.JS, Python,
+							Flask,
 							Keystone.JS (CMS), HTML,
 							CSS, Less, Sass, Handlebars,
 							Pug</span> <br><br>
@@ -107,7 +110,8 @@
 						I am proficient through full stack web development, with the ability to create interactive
 						frontends and efficient backends. I am a huge fan of JavaScript/TypeScript stacks involving
 						frontend frameworks such as Angular, React or Vue and an Express.JS backend. Whether it is a
-						simple landing page or a full-fledged web app, I love designing and developing these solutions.
+						simple landing page or a full-fledged web app, I love designing and developing these
+						solutions.
 					</span>
 				</div>
 				<div class="skills-table-data-col">
@@ -117,15 +121,19 @@
 					<span class="skill-content">
 						<h4 class="skill-subheading">Languages / Tools</h4>
 
-						<span class="skill-list">Python, Pandas, NumPy, AI, Tensorflow (Machine Learning), Keras, SQL
+						<span class="skill-list">Python, Pandas, NumPy, AI, Tensorflow (Machine Learning), Keras,
+							SQL
 							(PostgreSQL mainly!), MongoDB, ElasticSearch, BI (PowerBI, Tableau)</span> <br><br>
 						<div class="orange-line height-3"></div>
 						<br>
 						I am a big fan of dealing with big data. I am skilled with Python and many Python frameworks
-						such as Pandas and Tensorflow. Using these I am able to analyse big data sets, crunch numbers,
-						display data in an intiutive manner, peform ETL functions, and effeciently store data using a
+						such as Pandas and Tensorflow. Using these I am able to analyse big data sets, crunch
+						numbers,
+						display data in an intiutive manner, peform ETL functions, and effeciently store data using
+						a
 						varierty of SQL and NoSQL database engines. Recently, I have gotten very much into Machine
-						Learning, using Tensorflow, and I love creating and training models to solve complex real-world
+						Learning, using Tensorflow, and I love creating and training models to solve complex
+						real-world
 						issues with data and AI.
 					</span>
 				</div>
@@ -137,14 +145,18 @@
 						<h4 class="skill-subheading">Experience</h4>
 
 						<span class="skill-list">I have experience desiging, implementing and building digital
-							solutions. I am passionite about digital strategy and how digital solutions can bring value
+							solutions. I am passionite about digital strategy and how digital solutions can bring
+							value
 							to an organisation.</span> <br><br>
 						<div class="orange-line height-3"></div>
 						<br>
-						I was exposed to some digital strategy during my time at Nielsen TAM. This involved working on
-						projects which brought innovative digital solutions to the market. It was fascinating being on
+						I was exposed to some digital strategy during my time at Nielsen TAM. This involved working
+						on
+						projects which brought innovative digital solutions to the market. It was fascinating being
+						on
 						the cutting edge and using the latest and greatest tech to develop and deliver a solution. I
-						also had the chance to pitch a digital transformation to an internal process, that allowed it to
+						also had the chance to pitch a digital transformation to an internal process, that allowed
+						it to
 						be automated in the form of a web app. I led a project team of 3 working on this and really
 						loved showing how modern techinal solutions can make great business sense.
 					</span>
@@ -161,10 +173,12 @@
 	<div class="portfolio-container">
 		{{#each data.portfolios}}
 		<div class="portfolio">
-			<div class="portfolio-image" style="background-image: url('{{this.featured_photo.secure_url}}');"></div>
-			<div class="portfolio-content">
-				<span class="portfolio-title">{{this.title}}</span>
-			</div>
+			<a href="/portfolio/{{this._id}}">
+				<div class="portfolio-image" style="background-image: url('{{this.featured_photo.secure_url}}');"></div>
+				<div class="portfolio-content">
+					<span class="portfolio-title">{{this.title}}</span>
+				</div>
+			</a>
 		</div>
 		{{/each}}
 	</div>
