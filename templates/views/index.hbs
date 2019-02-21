@@ -155,17 +155,19 @@
 </div>
 
 <div class="section mar-t-5 ta-center">
-	<h2 class="section-heading" id="portfolio">Portfolio - Coming Soon!</h2>
+	<h2 class="section-heading" id="portfolio">Portfolio</h2>
 	<div class="orange-line height-5 width-40"></div><br>
-	<h4 class="skill-subheading">This section is coming soon. In the meantime, check out this website as my temporary
-		portfolio.</h4>
 
-	{{#each data.portfolios}}
-	<div class="portfolio">
-		{{this.title}}
+	<div class="portfolio-container">
+		{{#each data.portfolios}}
+		<div class="portfolio">
+			<div class="portfolio-image" style="background-image: url('{{this.featured_photo.secure_url}}');"></div>
+			<div class="portfolio-content">
+				<span class="portfolio-title">{{this.title}}</span>
+			</div>
+		</div>
+		{{/each}}
 	</div>
-	{{/each}}
-
 </div>
 
 <div class="section mar-t-5 ta-center">
