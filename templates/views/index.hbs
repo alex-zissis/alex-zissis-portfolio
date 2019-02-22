@@ -77,6 +77,33 @@
 			</div> <!-- cd-timeline__block -->
 			{{/each}}
 		</div>
+
+		<div class="cd-timeline__container">
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--orange js-cd-img">
+					<img src="/images/timeline/cd-icon-computer.png" alt="Computer">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>You visited my website!</h2>
+					<p>You accessed my website! Please feel free
+						to <a href="/contact">reach out.</a></p>
+					<span id="custom_milestone_date" class="cd-timeline__date"></span>
+					<script>
+						window.onload = function () {
+							var monthNames = ["January", "February", "March", "April", "May", "June",
+								"July", "August", "September", "October", "November", "December"
+							];
+
+							const d = new Date();
+							console.log(d)
+							document.getElementById("custom_milestone_date").innerText = monthNames[d.getMonth()] + " " + d.getFullYear();
+						}
+
+					</script>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+		</div>
 	</section> <!-- cd-timeline -->
 
 
