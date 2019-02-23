@@ -1,6 +1,6 @@
 {
   "name": "alex-zissis-portfolio",
-  "version": "0.0.0",
+  "version": "1.0.0-b",
   "private": true,
   "dependencies": {
     "@octopusdeploy/octopackjs": "^0.1.0",
