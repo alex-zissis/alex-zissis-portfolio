@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@octopusdeploy/octopackjs": "^0.1.0",
     "async": "2.1.4",
     "cloudinary": "^1.13.2",
     "dotenv": "4.0.0",
