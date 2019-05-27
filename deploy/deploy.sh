@@ -1,6 +1,6 @@
 eval "$(ssh-agent -s)" # Start ssh-agent cache
 mkdir .travis
-echo $ssh_key | openssl base64 -d 
+echo $ssh_key
 cat .travis/id_rsa
 chmod 600 .travis/id_rsa 
 
