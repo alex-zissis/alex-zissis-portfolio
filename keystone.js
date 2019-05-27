@@ -24,6 +24,7 @@ keystone.init({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
 		defaultLayout: 'default',
+		// eslint-disable-next-line no-new-require
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs',
 	}).engine,
@@ -60,7 +61,5 @@ keystone.set('nav', {
 });
 
 // Start Keystone to connect to your database and initialise the web server
-
-
 
 keystone.start();

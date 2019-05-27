@@ -95,6 +95,7 @@ module.exports = function () {
 		var suffix = _.isString(options.hash.suffix) ? options.hash.suffix : '';
 		var output = '';
 
+		// eslint-disable-next-line space-before-function-paren
 		function createTagList(tags) {
 			var tagNames = _.map(tags, 'name');
 
