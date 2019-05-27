@@ -1,0 +1,20 @@
+language: node_js
+sudo: true
+node_js: "10"
+services: mongodb
+
+before_script: 
+  - "npm run lint"
+  - "chmod +x deploy-scripts/*"
+  - "mkdir -p dist"
+
+script: 
+  - "npm run test"
+  - "./deploy/envvars.sh"
+
+after_script:
+  - "./deploy/deploy.sh"
+
+notifications:
+  email:
+    - alex_z9@outlook.com
