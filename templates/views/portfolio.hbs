@@ -1,0 +1,38 @@
+<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="/js/galleria-1.5.7.min.js"></script>
+
+<div class="portfolio-page-container">
+    <h2 class="portfolio-page-title">Portfolio: {{data.portfolio.title}} </h2>
+    <div class="orange-line height-5 width-80"></div><br>
+    <span style="float:right; font-size: 1.2em;"><a href="/">Return Home</a></span><br>
+    <h3>Description</h3>
+    {{{data.portfolio.description}}}
+
+    {{#if data.portfolio.website_demo_url}}
+    <h3>Website Demo</h3>
+    <b>Link:</b> <a href="{{data.portfolio.website_demo_url}}">{{data.portfolio.website_demo_url}}</a>
+    {{#if data.portfolio.website_demo_username}}<br>
+    <b>Username:</b> {{data.portfolio.website_demo_username}}<br>
+    <b>Password:</b> {{data.portfolio.website_demo_password}}
+    {{/if}}
+    {{/if}}
+
+    {{#if data.portfolio.github_url}}
+    <h3>Github URL</h3>
+    <b>Link:</b> <a href="{{data.portfolio.github_url}}">{{data.portfolio.github_url}}</a>
+    {{/if}}
+
+    <h3>Gallery</h3>
+    <div class="galleria">
+        {{#each data.portfolio.photos}}
+        <img src="{{this.secure_url}}">
+        {{/each}}
+    </div><br>
+</div>
+
+<script>
+    (function () {
+        Galleria.loadTheme('/styles/galleria/classic/galleria.classic.min.js');
+        Galleria.run('.galleria');
+    }());
+</script>

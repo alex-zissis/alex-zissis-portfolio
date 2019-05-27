@@ -54,3 +54,426 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+h1 {
+    font-size: 2em;
+    color: @main-color;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 300;
+}
+
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+.skill-subheading {
+    color: @orange;
+}
+
+.orange-line {
+    background-color: @orange;
+    margin: auto;
+}
+
+.height-3 {
+    height: 3px;
+}
+
+.height-5 {
+    height: 5px;
+}
+
+.width-40{
+    width: 40%;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+
+.skill-content {
+    font-weight: 200;
+}
+
+.skills-cont {
+    margin: auto;
+}
+
+.hamburger {
+    display: none;
+    margin-left: 5vw;
+    cursor: pointer;
+    margin-top: 3vh;
+}
+
+.nav-cont-small {
+    display: none;
+}
+
+
+@media @xs {
+    .skills-cont {
+        width: 100%;
+    }
+
+    .skills-table-data-col {
+        width: 100%;
+        margin-bottom: 10vh;
+        padding: 2vh 5vw;
+    }
+
+    .skills-table-data-col:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav-cont-small {
+        display: none;
+        margin: auto; 
+        width: 40%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-cont-small > div {
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        width: max-content;
+        padding: 1vw 1vh;
+        margin-top: 1vh;
+        font-size: 1.2em;
+        background-color: @secondary-color;
+        border-radius: 6px;
+    }
+
+    .nav-cont {
+        display: none;
+    }
+}
+
+
+@media @sm {
+    .skills-cont {
+        width: 100%;
+        
+    }
+    
+
+    .skills-table-data-col {
+        width: 99%;
+        margin-bottom: 10vh;
+        padding: 2vh 5vw;
+    }
+
+    .skills-table-data-col:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav-cont-small {
+        display: none;
+        margin: auto; 
+        width: 40%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-cont-small > div {
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        width: max-content;
+        padding: 1vw 1vh;
+        margin-top: 1vh;
+        font-size: 1.2em;
+        background-color: @secondary-color;
+        border-radius: 6px;
+    }
+
+    .nav-cont {
+        display: none;
+    }
+}
+
+@media @md {
+    .skills-cont {
+        width: 80%;
+    }
+
+
+    .nav-cont-small {
+        display: none;
+    }
+
+    .skills-table-data-col {
+        display: inline-block;
+        width: 32%;
+        vertical-align: top;
+    }
+
+
+    .nav-cont {
+        display: flex;
+        justify-content: space-between; 
+        margin: auto; 
+        width: 40%;
+    }
+
+    .nav-cont > div {
+        cursor: pointer;
+        color: @main-color;
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+}
+
+@media @lg {
+    .skills-cont {
+        width: 80%;
+    }
+
+    .skills-table-data-col {
+        display: inline-block;
+        width: 32%;
+        vertical-align: top;
+    }
+
+
+    .nav-cont-small {
+        display: none;
+    }
+
+    .nav-cont {
+        display: flex;
+        justify-content: space-between; 
+        margin: auto; 
+        width: 40%;
+    }
+
+    .nav-cont > div {
+        cursor: pointer;
+        color: @main-color;
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+}
+
+@media @xl {
+    .skills-cont {
+        width: 80%;
+    }
+
+    .skills-table-data-col {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+    }
+
+
+    .nav-cont-small {
+        display: none;
+    }
+    
+
+    .nav-cont {
+        display: flex;
+        justify-content: space-between; 
+        margin: auto; 
+        width: 40%;
+    }
+
+    .nav-cont > div {
+        cursor: pointer;
+        color: @main-color;
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+}
+
+@border-radius-px: 10px;
+
+.portfolio {
+    display: inline-block;
+    width: 220px;
+    height: 140px;
+    border-radius: @border-radius-px;
+    position: relative;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 4vh;
+}
+
+.portfolio:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.portfolio-title {
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+    font-size: 1.3em;
+    border-radius: @border-radius-px;
+}
+
+@blur-px: 2px;
+
+.portfolio-image {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    object-fit: cover;
+    background-color: @orange;
+    border-radius: @border-radius-px;
+    top: 0;
+    left: 0;
+    -webkit-filter: blur(@blur-px);
+    -moz-filter: blur(@blur-px);
+    -o-filter: blur(@blur-px);
+    -ms-filter: blur(@blur-px);
+    filter: blur(@blur-px);
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.portfolio-content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: @border-radius-px;
+}
+
+.skill-icon {
+    width: 20%;
+    min-width: 50px;
+}
+
+.contact-us-cont {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+.skill-title {
+    padding-bottom: 10px;
+    border-bottom: 5px solid @secondary-color;
+}
+
+.skills-table {
+    width: 100%;
+    border-radius: 20px;
+    border-collapse: separate;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.skills-table-bpdy {
+    width: 100%;
+}
+
+.skills-table-data-col {
+    text-align: center;
+    padding: 1vh 1vw;
+    background-color: white;
+}
+
+.skills-table-data-col:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.skills-table-data-col:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.body-text {
+    font-weight: 200;
+    font-size: 1.2em;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.reach-out {
+    margin-left: auto;
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+.header, .subtitle {
+    text-align: center;
+}
+
+.logo-container {
+    border-radius: 50%;
+    width: 100px;
+}
+
+@media @xs {
+    .logo-container {
+        width: 100px;
+    }
+}
+
+@media @sm {
+    .logo-container {
+        width: 100px;
+    }
+}
+
+@media @md {
+    .logo-container {
+        width: 100px;
+    }
+}
+
+@media @lg {
+    .logo-container {
+        width: 100px;
+    }
+}
+
+@media @xl {
+    .logo-container {
+        width: 100px;
+    }
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}

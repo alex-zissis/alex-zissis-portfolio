@@ -17,6 +17,18 @@
 	<meta name="theme-color" content="#ffffff">
 	<link href="/styles/site.min.css" rel="stylesheet">
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135084992-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-135084992-1');
+	</script>
+
+
+
 	{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
 	{{{isAdminEditorCSS user}}}
