@@ -1,6 +1,6 @@
 eval "$(ssh-agent -s)" # Start ssh-agent cache
 mkdir .travis
-openssl base64 -d <<< $ssh_key > .travis/id_rsa
+echo $ssh_key openssl base64 -d > .travis/id_rsa
 cat .travis/id_rsa
 chmod 600 .travis/id_rsa
 # Skip this command if you don't need to execute any additional commands after deploying.
