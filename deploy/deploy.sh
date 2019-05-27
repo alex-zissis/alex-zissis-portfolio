@@ -6,7 +6,7 @@ chmod 600 .travis/id_rsa
 echo $SSH_PASS | ssh-add -p .travis/id_rsa
 
 # Skip this command if you don't need to execute any additional commands after deploying.
-ssh -o "StrictHostKeyChecking no" -i .travis/id_rsa alex@$HOST <<EOF
+ssh -o "StrictHostKeyChecking no" alex@$HOST <<EOF
   cd $DEPLOY_DIR
   git fetch --all
   git checkout $TRAVIS_BRANCH
