@@ -11,7 +11,7 @@ exports = module.exports = function (req, res) {
 	};
 
 	view.on('init', function (next) {
-		keystone.list('Portfolio').model.find().sort('Title').exec(function (err, results) {
+		keystone.list('Portfolio').model.find().sort('title').exec(function (err, results) {
 			if (err || !results.length) {
 				return next(err);
 			}

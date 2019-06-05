@@ -12,7 +12,7 @@ Portfolio.add({
     website_demo_url: { type: Types.Url, initial: true, required: false },
     github_url: { type: Types.Url, initial: true, required: false },
     website_demo_username: { type: Types.Text, initial: true, required: false },
-    website_demo_password: { type: Types.Text, initial: true, required: false }
-
+    website_demo_password: { type: Types.Text, initial: true, required: false },
+    font_colour: { type: Types.Text, initial: true, required: false }
 });
 Portfolio.register();

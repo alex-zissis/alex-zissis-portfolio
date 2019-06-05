@@ -197,13 +197,30 @@
 
 	<div class="portfolio-container">
 		{{#each data.portfolios}}
-		<div class="portfolio">
-			<a href="/portfolio/{{this._id}}">
-				<div class="portfolio-image" style="background-image: url('{{this.featured_photo.secure_url}}');"></div>
-				<div class="portfolio-content">
-					<span class="portfolio-title">{{this.title}}</span>
-				</div>
-			</a>
+		<div class="inline-portfolio">
+			<div class="portfolio">
+				<a href="/portfolio/{{this._id}}">
+					<div class="portfolio-image" style="background-image: url('{{this.featured_photo.secure_url}}');">
+					</div>
+					<div class="portfolio-content">
+						<span class="portfolio-title" style="color: {{this.font_colour}}">{{this.title}}</span>
+					</div>
+				</a>
+			</div>
+			<div class="links-container">
+				{{#if this.github_url}}
+				<a href="{{this.github_url}}" target="_blank"><img class="social-icon" src="/images/github.svg"></a>
+				{{else}}
+				<img class="social-icon disabled" src="/images/github.svg">
+				{{/if}}
+
+				{{#if this.website_demo_url}}
+				<a href="{{this.website_demo_url}}" target="_blank"><img class="social-icon"
+						src="/images/website.png"></a>
+				{{else}}
+				<img class="social-icon disabled" src="/images/website.png">
+				{{/if}}
+			</div>
 		</div>
 		{{/each}}
 	</div>
