@@ -21,7 +21,7 @@ Enquiry.add({
 			{ value: 'question', label: 'I\'ve got a question' },
 			{ value: 'quote', label: 'I\'d like a quote for some services' },
 			{ value: 'other', label: 'Something else...' },
-		]
+		],
 	},
 	message: { type: Types.Markdown, required: true },
 	createdAt: { type: Date, default: Date.now },
