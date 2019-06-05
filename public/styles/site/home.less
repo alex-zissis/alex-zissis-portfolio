@@ -279,15 +279,22 @@ h4 {
 
 @border-radius-px: 10px;
 
+.inline-portfolio {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 4vh;
+}
+
+.links-container {
+    margin-top: 2vh;
+}
+
 .portfolio {
     display: inline-block;
     width: 220px;
     height: 140px;
     border-radius: @border-radius-px;
     position: relative;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 4vh;
 }
 
 .portfolio:hover {
@@ -308,6 +315,11 @@ h4 {
     width: 35px;
     margin-left: 25px;
     margin-right: 25px;
+}
+
+.social-icon.disabled {
+    filter: grayscale(100%);
+    opacity: .5;
 }
 
 
